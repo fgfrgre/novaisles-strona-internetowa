@@ -86,7 +86,7 @@ button:hover {
 }
 
 .server-icon {
-    width: 24px; /* Rozmiar podobny do wysokości tekstu w .status-info (około 1.1em) */
+    width: 128px; /* Rozmiar podobny do wysokości tekstu w .status-info (około 1.1em) */
     height: auto; /* Zachowanie proporcji */
     border-radius: 5px;
     vertical-align: middle;
