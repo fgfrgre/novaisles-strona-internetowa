@@ -17,7 +17,7 @@
             <div class="status-indicator"></div>
             <div class="status-info">
                 <div class="server-icon-container">
-                    <img class="server-icon" src="" alt="Server Icon" style="display: none;">
+                    <img class="server-icon" src="logo.png" alt="Server Icon" style="display: none;">
                 </div>
                 <span class="players">Ładowanie statusu...</span>
                 <span class="motd"></span>
@@ -85,21 +85,14 @@
                     playersElement.innerHTML = `Graczy: ${data.players.online}/${data.players.max}`;
                     motdElement.innerHTML = data.motd.clean.join('<br>');
                     versionElement.textContent = `Wersja: ${data.version}`;
-                    
-                    // Ładowanie ikony serwera
-                    if (data.icon) {
-                        serverIcon.src = data.icon;
-                        serverIcon.style.display = 'block';
-                    } else {
-                        serverIcon.style.display = 'none';
-                    }
+                    serverIcon.style.display = 'block'; // Pokazujemy ikonę, gdy serwer jest online
                 } else {
                     statusIndicator.classList.add('offline');
                     statusIndicator.classList.remove('online');
                     playersElement.textContent = "Serwer offline";
                     motdElement.textContent = "";
                     versionElement.textContent = "";
-                    serverIcon.style.display = 'none';
+                    serverIcon.style.display = 'none'; // Ukrywamy ikonę, gdy serwer jest offline
                 }
             } catch (error) {
                 console.error('Błąd pobierania statusu:', error);
