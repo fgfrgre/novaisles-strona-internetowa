@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
+    overflow-x: hidden; /* Zapobiega przewijaniu w poziomie */
 }
 
 header {
@@ -11,6 +12,8 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Uwzględnia padding w szerokości */
 }
 
 header h1 {
@@ -37,13 +40,22 @@ button:hover {
     background-color: #219653;
 }
 
+.logo {
+    max-width: 150px; /* Rozmiar logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Wyśrodkowanie */
+}
+
 .about, .rules {
     max-width: 800px;
+    width: 90%; /* Elastyczna szerokość dla mniejszych ekranów */
     margin: 20px auto;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 h2 {
@@ -60,9 +72,8 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 footer a {
@@ -74,9 +85,26 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
+/* Responsywność dla mniejszych ekranów */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .logo {
+        max-width: 100px; /* Mniejsze logo na telefonach */
+    }
+
+    .about, .rules {
+        padding: 15px;
+    }
 }
