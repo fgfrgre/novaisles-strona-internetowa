@@ -40,17 +40,7 @@
     .administration ul li { font-weight: bold }
     .administration ul li span {
       font-weight: normal;
-      color: #2c3e50; /* Zmieniono na ciemniejszy kolor dla lepszej widoczności */
-    }
-    @media (max-width:768px) {
-      header { padding: 30px 15px }
-      header h1 { font-size: 2em }
-      .about, .rules, .administration { margin: 20px 15px; padding: 20px }
-      .server-status { margin: 15px; padding: 10px; flex-wrap: nowrap; font-size: .9em }
-      .status-info { flex-direction: row; align-items: center; gap: 10px }
-      .server-icon-container { width: 25%; min-width: 48px; max-width: 80px }
-      .status-text { flex: 1 1 auto }
-      .copy-notification { width: 90%; text-align: center; padding: 12px; font-size: .9em }
+      color: #2c3e50;
     }
     
     /* Style dla zakładek w sekcji Administracja */
@@ -84,6 +74,65 @@
       border-top: none;
       background: #fff;
       border-radius: 5px;
+    }
+    
+    @media (max-width:768px) {
+      header { padding: 30px 15px }
+      header h1 { font-size: 2em }
+      .about, .rules, .administration { margin: 20px 15px; padding: 20px }
+      .server-status { margin: 15px; padding: 10px; flex-wrap: nowrap; font-size: .9em }
+      .status-info { flex-direction: row; align-items: center; gap: 10px }
+      .server-icon-container { width: 25%; min-width: 48px; max-width: 80px }
+      .status-text { flex: 1 1 auto }
+      .copy-notification { width: 90%; text-align: center; padding: 12px; font-size: .9em }
+    }
+    
+    /* Stylizacja dla ciemnego motywu */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+      header {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+      }
+      footer {
+        background: #1f1f1f;
+        color: #ccc;
+      }
+      footer a {
+        color: #3498db;
+      }
+      .about, .rules, .administration {
+        background: #1e1e1e;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+      .tabs {
+        background: #333;
+        border: 1px solid #444;
+      }
+      .tabs button {
+        color: #e0e0e0;
+      }
+      .tabs button:hover {
+        background: #444;
+      }
+      .tabs button.active {
+        background: #555;
+      }
+      .tabcontent {
+        border: 1px solid #444;
+        background: #1e1e1e;
+      }
+      .server-status {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .server-icon-container {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .copy-notification {
+        background: #2980b9;
+      }
     }
   </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
