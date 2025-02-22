@@ -45,6 +45,59 @@ button:hover {
     box-shadow: 0 6px 20px rgba(41, 128, 185, 0.4);
 }
 
+.server-status {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.status-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #cccccc;
+    flex-shrink: 0;
+}
+
+.status-indicator.online {
+    background: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.status-indicator.offline {
+    background: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.status-info {
+    color: white;
+    line-height: 1.4;
+}
+
+.status-info .players {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+}
+
+.status-info .motd {
+    font-style: italic;
+    display: block;
+    color: #ecf0f1;
+}
+
+.status-info .version {
+    display: block;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
 .about, .rules {
     max-width: 800px;
     margin: 40px auto;
@@ -144,6 +197,15 @@ footer a:hover {
     .about, .rules {
         margin: 20px 15px;
         padding: 20px;
+    }
+    
+    .server-status {
+        margin: 15px;
+        padding: 10px;
+    }
+    
+    .status-info {
+        font-size: 0.9em;
     }
     
     .copy-notification {
