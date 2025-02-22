@@ -78,19 +78,25 @@ button:hover {
 .status-info {
     color: white;
     line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Odstęp między ikoną a tekstem */
 }
 
 .server-icon-container {
-    margin-right: 10px;
     flex-shrink: 0;
 }
 
 .server-icon {
-    width: 128px; /* Rozmiar podobny do wysokości tekstu w .status-info (około 1.1em) */
+    width: 24px; /* Rozmiar podobny do wysokości tekstu w .status-info */
     height: auto; /* Zachowanie proporcji */
     border-radius: 5px;
     vertical-align: middle;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.status-text {
+    flex-grow: 1; /* Pozwala tekstowi zajmować dostępną przestrzeń */
 }
 
 .status-info .players {
@@ -219,16 +225,26 @@ footer a:hover {
         justify-content: center;
     }
     
+    .status-info {
+        flex-direction: column; /* Na mobile układ w kolumnie */
+        align-items: flex-start;
+        gap: 5px; /* Mniejszy odstęp na mobile */
+    }
+    
     .server-icon {
-        width: 20px; /* Mniejszy rozmiar na mobile, proporcjonalny do tekstu */
+        width: 20px; /* Mniejszy rozmiar na mobile */
     }
     
     .server-icon-container {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     
-    .status-info {
-        font-size: 0.9em;
+    .status-text {
+        width: 100%; /* Pełna szerokość na mobile */
+    }
+    
+    .status-info .players, .status-info .motd, .status-info .version {
+        display: block;
     }
     
     .copy-notification {
