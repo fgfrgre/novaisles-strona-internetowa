@@ -4,8 +4,6 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
-    overflow-x: hidden; /* Zapobiega przewijaniu w poziomie */
-    text-align: center; /* Wyśrodkowanie tekstu w body */
 }
 
 header {
@@ -13,8 +11,6 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 header h1 {
@@ -41,39 +37,22 @@ button:hover {
     background-color: #219653;
 }
 
-.logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-}
-
 .about, .rules {
     max-width: 800px;
-    width: 90%;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    text-align: center; /* Wyśrodkowanie tekstu w sekcjach */
 }
 
 h2 {
     color: #2ecc71;
-    margin: 0 0 15px; /* Symetryczny margines pod nagłówkiem */
 }
 
-.about p, .rules ul {
-    text-align: center; /* Wyśrodkowanie paragrafów i listy */
-}
-
-.rules ul {
+ul {
     list-style-type: disc;
-    padding: 0; /* Usunięcie domyślnego paddingu listy */
-    display: inline-block; /* Lista jako blok inline dla wyśrodkowania */
-    text-align: left; /* Wewnętrzne wyrównanie listy do lewej, ale blok wyśrodkowany */
+    padding-left: 20px;
 }
 
 footer {
@@ -81,8 +60,9 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    box-sizing: border-box;
 }
 
 footer a {
@@ -93,27 +73,9 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
-/* Responsywność dla mniejszych ekranów */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .logo {
-        max-width: 100px;
-    }
-
-    .about, .rules {
-        padding: 15px;
-    }
+.logo {
+    max-width: 150px; /* Dostosuj rozmiar logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Wyśrodkowanie i odstęp od reszty */
 }
