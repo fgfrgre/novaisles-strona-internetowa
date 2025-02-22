@@ -80,6 +80,18 @@ button:hover {
     line-height: 1.4;
 }
 
+.server-icon-container {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.server-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
 .status-info .players {
     font-weight: bold;
     font-size: 1.1em;
@@ -202,6 +214,17 @@ footer a:hover {
     .server-status {
         margin: 15px;
         padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .server-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .server-icon-container {
+        margin-bottom: 10px;
     }
     
     .status-info {
