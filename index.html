@@ -15,6 +15,8 @@
         <button onclick="copyIP()">Skopiuj IP: novaisles.pl</button>
     </header>
 
+    <div class="copy-notification">IP skopiowane pomyślnie! 🎉</div>
+
     <section class="about">
         <h2>O nas</h2>
         <p>
@@ -27,9 +29,9 @@
     <section class="rules">
         <h2>Zasady serwera</h2>
         <ul>
-            <li>Zakaz używania cheatów i modyfikacji dających przewagę.</li>
-            <li>Szanuj innych graczy – żadnych obraźliwych wypowiedzi.</li>
-            <li>Zabronione jest niszczenie wysp innych graczy bez zgody.</li>
+            <li>Zakaz używania cheatów i modyfikacji dających przewagę</li>
+            <li>Szanuj innych graczy – żadnych obraźliwych wypowiedzi</li>
+            <li>Zabronione jest niszczenie wysp innych graczy bez zgody</li>
             <li>Graj fair i ciesz się rozgrywką!</li>
         </ul>
     </section>
@@ -43,7 +45,11 @@
     <script>
         function copyIP() {
             navigator.clipboard.writeText("novaisles.pl");
-            alert("IP skopiowane do schowka!");
+            const notification = document.querySelector('.copy-notification');
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
         }
     </script>
 </body>
