@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaIsles - Klasyczny Serwer Skyblock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NovaIsles</h1>
+        <p>Klasyczny serwer Skyblock Minecraft</p>
+        <button onclick="copyIP()">Skopiuj IP: play.novaisles.com</button>
+    </header>
+
+    <section class="about">
+        <h2>O nas</h2>
+        <p>
+            Witaj na NovaIsles – serwerze Skyblock, który przenosi klasyczną rozgrywkę na nowy poziom! 
+            Rozpocznij od małej wyspy, rozwijaj ją i rywalizuj z innymi graczami. 
+            Czekają na Ciebie wyzwania, ekonomia i mnóstwo zabawy!
+        </p>
+    </section>
+
+    <section class="rules">
+        <h2>Zasady serwera</h2>
+        <ul>
+            <li>Zakaz używania cheatów i modyfikacji dających przewagę.</li>
+            <li>Szanuj innych graczy – żadnych obraźliwych wypowiedzi.</li>
+            <li>Zabronione jest niszczenie wysp innych graczy bez zgody.</li>
+            <li>Graj fair i ciesz się rozgrywką!</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NovaIsles. Wszystkie prawa zastrzeżone.</p>
+        <p>Dołącz do nas na Discordzie: <a href="#">discord.gg/novaisles</a></p>
+    </footer>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("play.novaisles.com");
+            alert("IP skopiowane do schowka!");
+        }
+    </script>
+</body>
+</html>
