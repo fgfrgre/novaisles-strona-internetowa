@@ -73,3 +73,10 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
