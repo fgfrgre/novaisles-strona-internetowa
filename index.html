@@ -16,6 +16,9 @@
         <div class="server-status">
             <div class="status-indicator"></div>
             <div class="status-info">
+                <div class="server-icon-container">
+                    <img class="server-icon" src="" alt="Server Icon" style="display: none;">
+                </div>
                 <span class="players">Ładowanie statusu...</span>
                 <span class="motd"></span>
                 <span class="version"></span>
@@ -74,21 +77,34 @@
                 const playersElement = document.querySelector('.players');
                 const motdElement = document.querySelector('.motd');
                 const versionElement = document.querySelector('.version');
+                const serverIcon = document.querySelector('.server-icon');
 
                 if (data.online) {
                     statusIndicator.classList.add('online');
+                    statusIndicator.classList.remove('offline');
                     playersElement.innerHTML = `Graczy: ${data.players.online}/${data.players.max}`;
                     motdElement.innerHTML = data.motd.clean.join('<br>');
                     versionElement.textContent = `Wersja: ${data.version}`;
+                    
+                    // Ładowanie ikony serwera
+                    if (data.icon) {
+                        serverIcon.src = data.icon;
+                        serverIcon.style.display = 'block';
+                    } else {
+                        serverIcon.style.display = 'none';
+                    }
                 } else {
                     statusIndicator.classList.add('offline');
+                    statusIndicator.classList.remove('online');
                     playersElement.textContent = "Serwer offline";
                     motdElement.textContent = "";
                     versionElement.textContent = "";
+                    serverIcon.style.display = 'none';
                 }
             } catch (error) {
                 console.error('Błąd pobierania statusu:', error);
                 document.querySelector('.players').textContent = "Błąd pobierania statusu";
+                document.querySelector('.server-icon').style.display = 'none';
             }
         }
 
