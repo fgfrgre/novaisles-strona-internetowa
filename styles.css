@@ -86,8 +86,8 @@ button:hover {
 }
 
 .server-icon {
-    width: 32px; /* Dostosowany rozmiar dla sekcji statusu */
-    height: 32px;
+    width: 80%; /* 80% szerokości kontenera .server-icon-container */
+    height: auto; /* Zachowanie proporcji */
     border-radius: 5px;
     vertical-align: middle;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -220,8 +220,7 @@ footer a:hover {
     }
     
     .server-icon {
-        width: 24px; /* Mniejszy rozmiar dla urządzeń mobilnych */
-        height: 24px;
+        width: 80%; /* Zachowanie 80% szerokości kontenera na mobile */
     }
     
     .server-icon-container {
