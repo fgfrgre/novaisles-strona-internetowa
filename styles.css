@@ -76,27 +76,35 @@ button:hover {
 }
 
 .status-info {
-    color: white;
-    line-height: 1.4;
     display: flex;
     align-items: center;
-    gap: 10px; /* Odstęp między ikoną a tekstem */
+    gap: 10px;
+    color: white;
+    line-height: 1.4;
 }
 
+/* Kontener ikony serwera – ustawiony jako procent dostępnej przestrzeni */
 .server-icon-container {
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    width: 20%;       /* Szerokość zależna od szerokości rodzica */
+    min-width: 64px;  /* Minimalna szerokość */
+    max-width: 128px; /* Maksymalna szerokość */
 }
 
 .server-icon {
-    width: 128; /* Rozmiar podobny do wysokości tekstu w .status-info */
-    height: auto; /* Zachowanie proporcji */
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     vertical-align: middle;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: width 0.3s ease;
 }
 
 .status-text {
-    flex-grow: 1; /* Pozwala tekstowi zajmować dostępną przestrzeń */
+    flex: 1 1 auto;
 }
 
 .status-info .players {
@@ -226,24 +234,24 @@ footer a:hover {
     }
     
     .status-info {
-        flex-direction: column; /* Na mobile układ w kolumnie */
+        flex-direction: column;
         align-items: flex-start;
-        gap: 5px; /* Mniejszy odstęp na mobile */
-    }
-    
-    .server-icon {
-        width: 20px; /* Mniejszy rozmiar na mobile */
+        gap: 5px;
     }
     
     .server-icon-container {
-        margin-bottom: 5px;
+        width: 30%;      /* Większy procent dla mniejszych ekranów */
+        min-width: 50px;
+        max-width: 100px;
     }
     
     .status-text {
-        width: 100%; /* Pełna szerokość na mobile */
+        width: 100%;
     }
     
-    .status-info .players, .status-info .motd, .status-info .version {
+    .status-info .players,
+    .status-info .motd,
+    .status-info .version {
         display: block;
     }
     
