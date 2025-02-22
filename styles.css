@@ -86,7 +86,7 @@ button:hover {
 }
 
 .server-icon {
-    width: 80%; /* 80% szerokości kontenera .server-icon-container */
+    width: 24px; /* Rozmiar podobny do wysokości tekstu w .status-info (około 1.1em) */
     height: auto; /* Zachowanie proporcji */
     border-radius: 5px;
     vertical-align: middle;
@@ -220,7 +220,7 @@ footer a:hover {
     }
     
     .server-icon {
-        width: 80%; /* Zachowanie 80% szerokości kontenera na mobile */
+        width: 20px; /* Mniejszy rozmiar na mobile, proporcjonalny do tekstu */
     }
     
     .server-icon-container {
