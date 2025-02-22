@@ -86,10 +86,11 @@ button:hover {
 }
 
 .server-icon {
-    width: 32px;
+    width: 32px; /* Dostosowany rozmiar dla sekcji statusu */
     height: 32px;
     border-radius: 5px;
     vertical-align: middle;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .status-info .players {
@@ -219,7 +220,7 @@ footer a:hover {
     }
     
     .server-icon {
-        width: 24px;
+        width: 24px; /* Mniejszy rozmiar dla urządzeń mobilnych */
         height: 24px;
     }
     
